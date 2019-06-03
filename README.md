@@ -22,7 +22,7 @@ For now, there is only one way to use:
 * <a href="#primitives">Creating primitives</a>
     * <a href="#point">Point</a>
     * <a href="#line">Line</a>
-    * <a href="#rectangle">Reactangle</a>
+    * <a href="#rectangle">Rectangle</a>
     * <a href="#triangle">Triangle</a>
     * <a href="#polygon">Polygon</a>
     * <a href="#circle">Circle</a>
