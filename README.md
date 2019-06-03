@@ -15,7 +15,7 @@ For now, there is only one way to use:
 * Add EasyGraphJS to a website as a `<script>` tag in one minute.
 
 # Documentation
-* <a href="#start">>Beginning of work</a>
+* <a href="#start">Beginning of work</a>
 * <a href="#grid">Creating a grid</a>
 * <a href="#axes">Creating coordinate axes:</a>
 * <a href="#graphic">Creating a graphic by points</a>
