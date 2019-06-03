@@ -37,7 +37,7 @@ For now, there is only one way to use:
 * <a href="#contributing">Contributing</a>
 * <a href="#license">License</a>
 
-### <p id="start">Beginning of work :</p>
+## <p id="start">Beginning of work :</p>
 This example will show how to add a workspace to a page. The first two parameters are width and height in pixels. The third parameter is an object that contains styles, currently only bgColor is available. The fourth parameter is the container class to which EasyGraphJS will be added. If the container class is not set, it will be added to the body tag as a child. 
 
 ```javascript
@@ -46,7 +46,7 @@ const graph =  new EasyGraphJS(1280, 770, {
 }, ".hw");
 ```
 
-### <p id="grid">Creating a grid :</p>
+## <p id="grid">Creating a grid :</p>
 This example will create a grid. You can set the size of a single cell, but it can not be less than 1, the default size is 18. Also you can set width and color of grid lines.
 
 ```javascript
@@ -57,7 +57,7 @@ graph.grid({
 });
 ```
 
-### <p id="axes">Creating coordinate axes:</p>
+## <p id="axes">Creating coordinate axes:</p>
 In this example, coordinate axes will be created. You can set marks on different axes. You can also set the distance between the marks along the horizontal and vertical axes (the default value is 10). For marks, you can set the width (lineWidth) and color. You can also set text parameters (along different axes), such as font size and font family. The default text styles are 10px Arial. The last parameter `offset` is optional, but it is desirable to use it so that the axes are visible (by default, the indent is 0 and the axes are pressed to the edges of the workspace, which is why marks and labels are not visible, which is not good).
 
 ```javascript 
@@ -91,7 +91,7 @@ graph.axes({
 });
 ```
 
-### <p id="graphic">Creating a graphic by points</p> 
+## <p id="graphic">Creating a graphic by points</p> 
 This is an example in which the graph of a function is plotted by given points. The first required parameter is `points`, this is a two-dimensional array in which the first two elements are the coordinates of a point, and the third parameter is an object with two properties: the` text` string that will be placed next to this point, and the logical `top` which explains whether this text will be placed above or below the point. You can set some other point styles, such as size, font size, and text family (if installed) and point color. You can also set the width of the line that connects the two points and its color.
 
 ```javascript 
@@ -120,7 +120,7 @@ graph.drawPoints({
 });
 ```
 
-### <p id="primitives">Creating primitives</p>
+## <p id="primitives">Creating primitives</p>
 In EasyGraphJS it is very easy to create primitives. There are 8 primitives :
 * <p id="point"> <b>Point</b> </p>
 ```javascript 
@@ -247,7 +247,7 @@ graph.text({
 });
 ```
 
-#### <p id="color">Color system :</p>
+## <p id="color">Color system :</p>
 You can get string with color in three different ways : 
 * Just write a string with css like value of color 
 ```javascript
@@ -262,13 +262,13 @@ const white = EasyGraphJS.rgb(255, 255, 255);
 const translucentBlack = EasyGraphJS.rgba(0, 0, 0, 0.5); 
 ```
 
-#### <p id="textMetrix">How to get TextMetrics ?</p>
+## <p id="textMetrix">How to get TextMetrics ?</p>
 The TextMetrics interface represents the dimensions of a piece of text in the canvas. You can get it by using `getTextMetrix` method :
 ```javascript
 const textMetrix = graph.getTextMetrix("Text");
 const width = textMetrix.width; // return width of text
 ```
-#### <p id="workspace">How to get information about workspace ?</p>
+## <p id="workspace">How to get information about workspace ?</p>
 There some methods to get information about workspace :
 * <p id="workspaceSize"> <b>Workspace size</b> </p>
 ```javascript
