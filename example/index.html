@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title> EasyGraphJS test </title>
+
+    <script src="../lib/EasyGraphJS.js"> </script>
+</head>
+<body>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hw {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #D2D7D3;
+    }
+</style>
+
+    <div class="hw"> </div>
+
+    <script>
+
+        const graph = new EasyGraphJS(1280, 770, {
+            bgColor : "white"
+        }, ".hw");
+
+        graph.clear();
+
+        graph.grid({
+            size : 50,
+            lineWidth : 1,
+            color : "#D2D7D3"
+        });
+
+        graph.axes({
+			labels : {
+				horizontal : [10,20,30,40,50,60,70,80,90,100],
+			    vertical : [1,2,3,4,5,6,7,8,9,10,11,12]
+			},
+			distance : {
+				x : 100,
+				y : 50
+			},
+			text : {
+				x : {
+					color : "brown",
+					fontSize : 20,
+					fontFamily : "Consolas"
+				},
+				y : {
+					fontSize : 20,
+					fontFamily : "Consolas"
+				}
+			},
+			separators : {
+		        lineWidth : 2,       
+		        color : 'black'         
+		    },
+		    offset : {
+		    	x : 100,
+		    	y : 50
+		    } 
+		});
+
+		let totalOffset = graph.getOffset().x + graph.getLineWidth();
+
+		graph.drawPoints({
+			points : [  
+			    [totalOffset + 30, 420, {text : "74.0", top : true}],
+			    [300, 210, {text : "31.0"}],
+			    [400, 650, {text : "MAXIMUM", top : true}],
+			    [425, 600],
+			    [560, 440, {text : "78.0"}],
+			    [600, 500],
+			    [650, 100, {text : "MINIMUM"}],
+			    [720, 200],
+			    [800, 400, {text : "Period of stability", top: true}],
+			    [850, 400],
+			    [1100, 600, {text : "End of season", top: true}],
+			],
+		    lineWidth : 1, 
+		    color : 'orange',
+		    pointsStyle : {
+		    	size : 5,
+		    	fontSize : 15,
+		    	fontFamily : "Roboto",
+		    	color : "darkorange"
+		    }
+		});
+
+		graph.text({
+            x : (graph.getWidth() - graph.getTextMetrix("Activity report for the summer of 2019").width)/4,
+            y : graph.getHeight() - 55,
+            text : "Activity report for the summer of 2019",
+            align : "center",
+            font : {
+                size : 40,
+                type : "Consolas"
+            },
+            color : "darkorange"
+        });
+
+        graph.text({
+            x : 25,
+            y : graph.getHeight() - 70,
+            text : "Weeks",
+            align : "center",
+            font : {
+                size : 20,
+                type : "Consolas"
+            },
+            color : "darkorange"
+        });
+
+         graph.text({
+            x : graph.getWidth() - 140,
+            y : 15,
+            text : "Subscribers",
+            align : "center",
+            font : {
+                size : 20,
+                type : "Consolas"
+            },
+            color : "darkorange"
+        });
+
+    </script>
+</body>
+</html>
