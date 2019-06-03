@@ -17,7 +17,7 @@ For now, there is only one way to use:
 # Documentation
 * <a href="#start">Beginning of work</a>
 * <a href="#grid">Creating a grid</a>
-* <a href="#axes">Creating coordinate axes:</a>
+* <a href="#axes">Creating coordinate axes</a>
 * <a href="#graphic">Creating a graphic by points</a>
 * <a href="#primitives">Creating primitives</a>
     * <a href="#point">Point</a>
