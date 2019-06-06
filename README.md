@@ -51,9 +51,9 @@ This example will create a grid. You can set the size of a single cell, but it c
 
 ```javascript
 graph.grid({
-	size : 10,     
-	lineWidth : 1,     
-	color : 'purple'
+    size : 10,     
+    lineWidth : 1,     
+    color : 'purple'
 });
 ```
 
@@ -62,31 +62,31 @@ In this example, coordinate axes will be created. You can set marks on different
 
 ```javascript 
 graph.axes({
-	labels : {
-		horizontal : [10,20,30,40,50,60,70,80,90,100],
-	    vertical : [1,2,3,4,5,6,7,8,9,10,11,12]
-	},
-	distance : {
-		x : 100,
-		y : 50
-	},
-	text : {
-		x : {
-			fontSize : 20,
-			fontFamily : "Consolas"
-		},
-		y : {
-			fontSize : 20,
-			fontFamily : "Consolas"
-		}
-	},
-	separators : {
+    labels : {
+        horizontal : [10,20,30,40,50,60,70,80,90,100],
+        vertical : [1,2,3,4,5,6,7,8,9,10,11,12]
+    },
+    distance : {
+        x : 100,
+        y : 50
+    },
+    text : {
+        x : {
+            fontSize : 20,
+            fontFamily : "Consolas"
+        },
+        y : {
+            fontSize : 20,
+            fontFamily : "Consolas"
+        }
+    },
+    separators : {
         lineWidth : 2,       
         color : 'black'         
     },
     offset : {
-    	x : 100,
-    	y : 50
+        x : 100,
+        y : 50
     } 
 });
 ```
@@ -96,26 +96,26 @@ This is an example in which the graph of a function is plotted by given points. 
 
 ```javascript 
 graph.drawPoints({
-	points : [  
-	    [totalOffset + 30, 420, {text : "74.0", top : true}],
-	    [300, 210, {text : "31.0"}],
-	    [400, 650, {text : "MAXIMUM", top : true}],
-	    [425, 600],
-	    [560, 440, {text : "78.0"}],
-	    [600, 500],
-	    [650, 100, {text : "MINIMUM"}],
-	    [720, 200],
-	    [800, 400, {text : "Period of stability", top: true}],
-	    [850, 400],
-	    [1100, 600, {text : "End of season", top: true}],
-	],
+    points : [  
+        [totalOffset + 30, 420, {text : "74.0", top : true}],
+        [300, 210, {text : "31.0"}],
+        [400, 650, {text : "MAXIMUM", top : true}],
+        [425, 600],
+        [560, 440, {text : "78.0"}],
+        [600, 500],
+        [650, 100, {text : "MINIMUM"}],
+        [720, 200],
+        [800, 400, {text : "Period of stability", top: true}],
+        [850, 400],
+        [1100, 600, {text : "End of season", top: true}],
+    ],
     lineWidth : 1, 
     color : 'orange',
     pointsStyle : {
-    	size : 5,
-    	fontSize : 15,
-    	fontFamily : "Roboto",
-    	color : "darkorange"
+        size : 5,
+        fontSize : 15,
+        fontFamily : "Roboto",
+        color : "darkorange"
     }
 });
 ```
